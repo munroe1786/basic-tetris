@@ -34,10 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
         [1, width, width+1, width*2+1]
     ]
 
-    const theTetrominoes = [lTetromino, oTetromino, iTetromino, tTetromino]
+    const zTetromino = [
+        [0, width, width+1, width*2+1],
+        [width+1, width+2,width*2,width*2+1],
+        [0,width,width+1,width*2+1],
+        [width+1, width+2,width*2,width*2+1]
+    ]
+
+    const theTetrominoes = [lTetromino, oTetromino, iTetromino, tTetromino, zTetromino]
 
     let currentPosition = 12
-    let current = theTetrominoes[3][3]
+    let current = theTetrominoes[4][1]
 
     function draw() {
         current.forEach(index => {
