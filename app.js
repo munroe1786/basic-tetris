@@ -142,7 +142,10 @@ document.addEventListener('DOMContentLoaded', () => {
         draw()
     }
 
-    
+    //show tetromino that is up next in mini grid display
+    const displaySquares = document.querySelectorAll('.mini-grid div')
+    const displayWidth = 4
+    let displayIndex = 0
 
 
 })
