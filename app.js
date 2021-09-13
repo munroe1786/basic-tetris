@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //move the tetromino right, unless it's at the edge or is blocked
     function moveRight() {
         undraw()
-        const isAtRightEdge = current.some(index => (currentPosition - index) % width === width -1)
+        const isAtRightEdge = current.some(index => (currentPosition + index) % width === width -1)
 
         if(!isAtRightEdge) currentPosition +=1
 
