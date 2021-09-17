@@ -171,4 +171,11 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    //add functionality to the start button
+    startButton.addEventListener('click', () => {
+        if (timerId) {
+            clearInterval(timerId)
+        }
+    })
+
 })
