@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentPosition = 4
             draw()
             displayShape()
+            addScore()
         }
     }
 
@@ -194,8 +195,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 score +=10
                 scoreDisplay.innerHTML = score
                 row.forEach(index => {
-                    squares[index.classList.remove('taken')]
+                    squares[index].classList.remove('taken')
                 })
+                const squaresRemoved = squares.splice(i, width)
+                squares = squaresRemoved.concat(squares)
+                squares.forEach(cell => grid.appendChild(cell))
             }
         }
     }
